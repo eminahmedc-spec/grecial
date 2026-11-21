@@ -286,6 +286,88 @@ button { font-family: inherit; }
   color: var(--muted);
 }
 
+.standards {
+  margin-top: 10px;
+  padding: 0 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(207, 230, 242, 0.9);
+}
+
+.standards summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 56px;
+  padding: 8px 0;
+  list-style: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--deep);
+}
+
+.standards summary::-webkit-details-marker { display: none; }
+
+.standards summary:focus-visible {
+  outline: 3px solid #1c89bf;
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+.standards .chev {
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+  border-right: 3px solid currentColor;
+  border-bottom: 3px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  flex: none;
+}
+
+.standards[open] .chev { transform: rotate(-135deg); }
+
+.standards-list {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.standards-list li {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #f4fbff;
+}
+
+.std-code {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--deep);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.standards-list p {
+  margin: 8px 0 0;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.standards-list p.std-module {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
 /* ---------- shared panel/buttons ---------- */
 .panel {
   background: var(--card);
