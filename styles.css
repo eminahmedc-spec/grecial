@@ -368,6 +368,22 @@ button { font-family: inherit; }
   color: var(--ink);
 }
 
+.std-subject {
+  margin: 6px 0 8px;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5c7a8a;
+}
+
+.std-note {
+  margin: 2px 0 18px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #6b8897;
+}
+
 /* ---------- shared panel/buttons ---------- */
 .panel {
   background: var(--card);
