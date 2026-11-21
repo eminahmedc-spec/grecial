@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#dff2fe">
+  <meta name="description" content="Glacial Explorer: a hands-on glacier science app for Class 4 (ages 9–10). Works offline, no ads.">
+  <title>Glacial Explorer — Class 4 glacier app</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-badge" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round">
+            <path d="M24 6v36M8.6 15l30.8 18M39.4 15 8.6 33"/>
+            <path d="M24 14l-5-5M24 14l5-5M24 34l-5 5M24 34l5 5"/>
+          </svg>
+        </span>
+        <span>Glacial Explorer</span>
+      </div>
+      <span class="topbar-tag">Class 4 · Ages 9–10</span>
+    </header>
+
+    <main>
+      <!-- ============ HOME ============ -->
+      <section id="screen-home" class="screen is-active">
+        <div class="hero">
+          <div class="hero-copy">
+            <p class="kicker">Earth science you can touch</p>
+            <h1>Meet the giant ice that moves.</h1>
+            <p class="hero-sub">Squeeze snow into blue ice, carve a mountain valley, visit real glaciers, and keep the ice healthy with clever everyday choices.</p>
+          </div>
+          <svg class="hero-art" viewBox="0 0 380 300" aria-hidden="true">
+            <defs>
+              <linearGradient id="heroIce" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffffff"/>
+                <stop offset=".5" stop-color="#bde9f8"/>
+                <stop offset="1" stop-color="#5fbde3"/>
+              </linearGradient>
+            </defs>
+            <circle cx="306" cy="62" r="24" fill="#ffd166"/>
+            <path d="M0 244 L118 74 L196 172 L244 120 L380 244 Z" fill="#a9c3d3"/>
+            <path d="M118 74 L146 118 L132 114 L122 128 L108 108 L96 116 Z" fill="#ffffff"/>
+            <path d="M244 120 L262 146 L250 142 L242 152 L230 138 L224 144 Z" fill="#ffffff" opacity=".85"/>
+            <path d="M136 128 C 186 158, 214 182, 264 218 C 284 232, 268 246, 246 240 C 196 226, 160 194, 140 158 Z" fill="url(#heroIce)" stroke="#ffffff" stroke-width="3"/>
+            <ellipse cx="236" cy="252" rx="104" ry="20" fill="#8fd3ee"/>
+            <ellipse cx="236" cy="248" rx="80" ry="13" fill="#bfeaf9"/>
+            <path d="M0 262 Q 120 244 240 258 T 380 256 L 380 300 L 0 300 Z" fill="#dff1e4"/>
+          </svg>
+        </div>
+
+        <div class="module-grid">
+          <button class="module-card" data-module="lab" type="button">
+            <span class="done-badge">Finished</span>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round">
+                <path d="M24 5v38M7.6 14.5l32.8 19M40.4 14.5 7.6 33.5"/>
+              </svg>
+            </span>
+            <h3>Snow-to-Ice Lab</h3>
+            <p>Add winter after winter. Watch fluffy snow squash into firn, then blue glacier ice.</p>
+            <span class="card-cta">Start <span aria-hidden="true">→</span></span>
+          </button>
+
+          <button class="module-card" data-module="valley" type="button">
+            <span class="done-badge">Finished</span>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="30" height="30" fill="currentColor">
+                <path d="M4 40 17 15l8 13 6-9 13 21z"/>
+                <path d="M17 15l5 8-4-2-3 4-4-4z" fill="#ffffff" opacity=".9"/>
+              </svg>
+            </span>
+            <h3>Mountain &amp; Valley Builder</h3>
+            <p>Slide a glacier downhill and see it scrape rock, steepen walls, and leave a lake.</p>
+            <span class="card-cta">Start <span aria-hidden="true">→</span></span>
+          </button>
+
+          <button class="module-card" data-module="map" type="button">
+            <span class="done-badge">Finished</span>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="currentColor" stroke-width="3">
+                <circle cx="24" cy="24" r="16"/>
+                <ellipse cx="24" cy="24" rx="7" ry="16"/>
+                <path d="M8 24h32M12 16h24M12 32h24"/>
+              </svg>
+            </span>
+            <h3>World Ice Map</h3>
+            <p>Tap glowing dots to visit glaciers in the Himalayas, Alps, Andes, Greenland and Antarctica.</p>
+            <span class="card-cta">Start <span aria-hidden="true">→</span></span>
+          </button>
+
+          <button class="module-card" data-module="melt" type="button">
+            <span class="done-badge">Finished</span>
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round">
+                <path d="M29 9a5 5 0 0 0-10 0v19a9 9 0 1 0 10 0z"/>
+                <path d="M24 16v16"/>
+              </svg>
+            </span>
+            <h3>Melt-O-Meter</h3>
+            <p>Make five everyday choices and see how much ice stays healthy.</p>
+            <span class="card-cta">Start <span aria-hidden="true">→</span></span>
+          </button>
+        </div>
+
+        <p class="note"><strong>For grown-ups:</strong> This app is made for Class 4 readers. Works offline, has no ads, no sign-in and no links out. Tap <em>Hear it</em> anywhere for read-aloud narration.</p>
+      </section>
+
+      <!-- ============ LAB ============ -->
+      <section id="screen-lab" class="screen" aria-labelledby="labTitle">
+        <div class="screen-head">
+          <button class="back-btn" data-home type="button">← All games</button>
+          <h2 id="labTitle">Snow-to-Ice Lab</h2>
+          <button class="speak-btn" data-speak="lab" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 9v6h4l5 4V5L8 9H4Z" fill="currentColor"/>
+              <path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Hear it
+          </button>
+        </div>
+
+        <div class="lab-grid">
+          <div class="panel lab-visual">
+            <div class="lab-scene" id="labScene" data-stage="0" aria-hidden="true">
+              <div class="press press-left"></div>
+              <div class="press press-right"></div>
+              <div class="ice-core" id="iceCore" data-stage="0"></div>
+              <div class="rock-base"></div>
+            </div>
+            <div class="air-gauge">
+              <span>Air inside the ice</span>
+              <div class="bar"><i id="airBar"></i></div>
+              <b id="airValue">90%</b>
+            </div>
+          </div>
+
+          <div class="panel">
+            <ol class="stage-pills" aria-label="Stages">
+              <li><span class="pill is-active">1. Fresh snow</span></li>
+              <li><span class="pill">2. Packed snow</span></li>
+              <li><span class="pill">3. Firn</span></li>
+              <li><span class="pill">4. Glacier ice</span></li>
+            </ol>
+            <p class="stage-year" id="labYear">Year 0</p>
+            <p class="stage-text" id="labText" aria-live="polite">Fresh snow falls on the mountain. It is fluffy and full of air, like a feather pillow.</p>
+            <button class="primary-btn" id="labNext" type="button">Add 20 more winters</button>
+            <button class="ghost-btn" id="labReset" type="button">Start again</button>
+            <div class="word-row">
+              <span class="word-label">Tap a word:</span>
+              <button class="word-btn" data-word="snow" type="button">snow</button>
+              <button class="word-btn" data-word="firn" type="button">firn</button>
+              <button class="word-btn" data-word="ice" type="button">glacier ice</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ VALLEY ============ -->
+      <section id="screen-valley" class="screen" aria-labelledby="valleyTitle">
+        <div class="screen-head">
+          <button class="back-btn" data-home type="button">← All games</button>
+          <h2 id="valleyTitle">Mountain &amp; Valley Builder</h2>
+          <button class="speak-btn" data-speak="valley" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 9v6h4l5 4V5L8 9H4Z" fill="currentColor"/>
+              <path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Hear it
+          </button>
+        </div>
+
+        <div class="valley-card">
+          <svg id="valleySvg" viewBox="0 0 800 470" role="img" aria-label="A glacier sliding down a mountain valley toward a lake">
+            <defs>
+              <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#cfeaff"/><stop offset="1" stop-color="#f0faff"/>
+              </linearGradient>
+              <linearGradient id="rockG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#9c8369"/><stop offset="1" stop-color="#76604c"/>
+              </linearGradient>
+              <linearGradient id="floorG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#c9b69c"/><stop offset="1" stop-color="#a89173"/>
+              </linearGradient>
+              <linearGradient id="iceG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#eefbff"/><stop offset="1" stop-color="#b7e7f8"/>
+              </linearGradient>
+              <linearGradient id="lakeG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#8ddbf4"/><stop offset="1" stop-color="#2f8fbd"/>
+              </linearGradient>
+              <clipPath id="polishClip"><path id="polishClipPath" d="M0 0"/></clipPath>
+              <clipPath id="valleyClip">
+                <rect x="290" y="60" width="220" height="170"/>
+                <polygon points="300,150 500,150 740,470 60,470"/>
+              </clipPath>
+            </defs>
+
+            <rect width="800" height="470" fill="url(#skyG)"/>
+            <circle cx="682" cy="64" r="28" fill="#ffe08a"/>
+            <g fill="#ffffff" opacity=".8">
+              <ellipse cx="140" cy="66" rx="52" ry="14"/>
+              <ellipse cx="170" cy="58" rx="30" ry="11"/>
+              <ellipse cx="560" cy="46" rx="44" ry="12"/>
+            </g>
+            <path d="M0 150 L110 46 L206 150 Z" fill="#c6dfee"/>
+            <path d="M110 46 L134 84 L122 80 L114 92 L98 74 L90 82 Z" fill="#ffffff" opacity=".9"/>
+            <path d="M560 150 L664 66 L770 150 Z" fill="#c6dfee"/>
+            <path d="M664 66 L684 98 L674 94 L666 104 L652 90 L646 96 Z" fill="#ffffff" opacity=".9"/>
+
+            <polygon points="0,150 300,150 60,470 0,470" fill="url(#rockG)"/>
+            <polygon points="500,150 800,150 800,470 740,470" fill="url(#rockG)"/>
+            <polygon points="300,150 500,150 740,470 60,470" fill="url(#floorG)"/>
+
+            <g stroke="#8d775d" stroke-width="3" opacity=".35" stroke-linecap="round">
+              <line x1="250" y1="190" x2="200" y2="250"/>
+              <line x1="220" y1="260" x2="160" y2="330"/>
+              <line x1="560" y1="200" x2="610" y2="260"/>
+              <line x1="590" y1="290" x2="650" y2="360"/>
+            </g>
+            <polygon points="0,150 300,150 288,170 0,164" fill="#ffffff" opacity=".65"/>
+            <polygon points="500,150 800,150 800,164 512,170" fill="#ffffff" opacity=".65"/>
+            <ellipse cx="400" cy="152" rx="92" ry="26" fill="url(#iceG)" stroke="#7fc9e4" stroke-width="2"/>
+
+            <path id="polishFill" d="M0 0" fill="#e3d3b9" opacity=".55"/>
+            <g clip-path="url(#polishClip)" id="scratchGroup"></g>
+
+            <ellipse id="lake" cx="400" cy="436" rx="26" ry="5" fill="url(#lakeG)" style="visibility:hidden"/>
+            <ellipse id="iceShadow" cx="400" cy="380" rx="100" ry="14" fill="#2d6a86" opacity=".18"/>
+
+            <g id="glacier" clip-path="url(#valleyClip)">
+              <rect id="iceBody" x="325" y="130" width="150" height="100" rx="50" fill="url(#iceG)" stroke="#7fc9e4" stroke-width="2.5"/>
+              <g id="iceLines"></g>
+              <text id="iceLabel" x="400" y="200" text-anchor="middle" fill="#2f89a8" font-size="13" font-weight="800" letter-spacing="2.5" opacity=".7">GLACIER</text>
+            </g>
+            <text id="lakeLabel" x="400" y="464" text-anchor="middle" fill="#1f6f93" font-size="11" font-weight="800" letter-spacing="2" opacity="0">GLACIAL LAKE</text>
+          </svg>
+
+          <div class="valley-controls">
+            <label class="slider-label" for="valleySlider">Push the glacier</label>
+            <input id="valleySlider" type="range" min="0" max="100" value="0" step="1" aria-label="Glacier position">
+            <button id="valleyReset" class="ghost-btn small" type="button">Start over</button>
+          </div>
+          <p class="valley-status" id="valleyStatus" aria-live="polite">The glacier waits at the top of the mountain.</p>
+        </div>
+      </section>
+
+      <!-- ============ MAP ============ -->
+      <section id="screen-map" class="screen" aria-labelledby="mapTitle">
+        <div class="screen-head">
+          <button class="back-btn" data-home type="button">← All games</button>
+          <h2 id="mapTitle">World Ice Map</h2>
+          <button class="speak-btn" data-speak="map" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 9v6h4l5 4V5L8 9H4Z" fill="currentColor"/>
+              <path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Hear it
+          </button>
+        </div>
+
+        <div class="map-card">
+          <div class="map-wrap">
+            <svg viewBox="0 0 800 420" aria-hidden="true">
+              <defs>
+                <linearGradient id="oceanG" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#dff4ff"/><stop offset="1" stop-color="#c7e9f9"/>
+                </linearGradient>
+              </defs>
+              <rect width="800" height="420" rx="18" fill="url(#oceanG)"/>
+              <g stroke="#a8d8ee" stroke-width="1.5" stroke-dasharray="6 10" opacity=".7">
+                <line x1="0" y1="120" x2="800" y2="120"/>
+                <line x1="0" y1="210" x2="800" y2="210"/>
+                <line x1="0" y1="300" x2="800" y2="300"/>
+              </g>
+
+              <g fill="#97c6a5" stroke="#6f9f82" stroke-width="2" stroke-linejoin="round">
+                <path d="M58 100 L86 72 L140 58 L200 60 L232 82 L222 106 L236 124 L214 138 L200 160 L206 186 L186 204 L168 194 L172 170 L152 158 L140 176 L124 160 L128 138 L106 128 L94 146 L78 130 L84 112 Z"/>
+                <path d="M178 232 L212 222 L232 248 L226 282 L210 318 L196 352 L182 358 L190 322 L174 292 L164 262 Z"/>
+                <path d="M396 74 L448 64 L476 80 L468 104 L486 118 L462 132 L430 126 L408 112 L386 94 Z"/>
+                <path d="M404 138 L462 130 L496 152 L492 196 L472 232 L466 268 L438 286 L412 262 L404 220 L392 178 Z"/>
+                <path d="M486 66 L560 46 L640 52 L700 78 L724 112 L706 142 L668 152 L640 140 L612 156 L588 146 L562 158 L540 138 L512 142 L486 120 L468 92 Z"/>
+                <path d="M584 160 L612 158 L622 188 L604 210 L588 184 Z"/>
+                <path d="M636 268 L700 258 L728 284 L716 314 L676 322 L648 306 L630 286 Z"/>
+              </g>
+              <path d="M248 42 L300 34 L326 60 L318 90 L278 98 L250 78 Z" fill="#eaf7fd" stroke="#b9dcee" stroke-width="2"/>
+              <path d="M36 396 Q 120 384 200 392 Q 280 400 360 392 Q 440 384 520 394 Q 610 404 700 392 Q 750 386 768 396 L 768 414 L 36 414 Z" fill="#f2fbff" stroke="#cfe6f2" stroke-width="2"/>
+
+              <g fill="#79b5d4" font-family="Segoe UI, Verdana, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">
+                <text x="42" y="378">PACIFIC OCEAN</text>
+                <text x="320" y="204">ATLANTIC OCEAN</text>
+                <text x="540" y="252">INDIAN OCEAN</text>
+              </g>
+            </svg>
+
+            <button class="hotspot" data-region="greenland" style="left:35.6%;top:15.7%" type="button" aria-label="Greenland">
+              <i></i><span>Greenland</span>
+            </button>
+            <button class="hotspot" data-region="alps" style="left:56%;top:23%" type="button" aria-label="The Alps, Europe">
+              <i></i><span>Alps</span>
+            </button>
+            <button class="hotspot" data-region="himalaya" style="left:75.5%;top:38%" type="button" aria-label="The Himalayas, Asia">
+              <i></i><span>Himalayas</span>
+            </button>
+            <button class="hotspot" data-region="andes" style="left:23.1%;top:70%" type="button" aria-label="The Andes, South America">
+              <i></i><span>Andes</span>
+            </button>
+            <button class="hotspot label-top" data-region="antarctica" style="left:52.5%;top:94%" type="button" aria-label="Antarctica">
+              <i></i><span>Antarctica</span>
+            </button>
+          </div>
+
+          <div class="fact-card" id="factCard">
+            <div class="fact-head">
+              <h3 id="factTitle">Tap a glowing dot</h3>
+              <button class="ghost-btn small" id="mapSpeak" type="button">Read fact</button>
+            </div>
+            <p id="factText">Each dot is a real place with glaciers. Tap one to hear a fact about it.</p>
+            <p class="map-count" id="mapCount">0 of 5 glacier regions explored</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ MELT ============ -->
+      <section id="screen-melt" class="screen" aria-labelledby="meltTitle">
+        <div class="screen-head">
+          <button class="back-btn" data-home type="button">← All games</button>
+          <h2 id="meltTitle">Melt-O-Meter</h2>
+          <button class="speak-btn" data-speak="melt" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 9v6h4l5 4V5L8 9H4Z" fill="currentColor"/>
+              <path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Hear the question
+          </button>
+        </div>
+
+        <div class="melt-layout">
+          <div class="panel melt-visual">
+            <p class="ice-pct" id="icePct">100%</p>
+            <div class="ice-glass" id="iceGlass" aria-hidden="true">
+              <div id="iceFill"></div>
+            </div>
+            <p class="ice-label">Ice health</p>
+          </div>
+
+          <div class="panel">
+            <div id="meltPlay">
+              <p class="round-label" id="roundLabel">Round 1 of 5</p>
+              <div class="dots" id="roundDots" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <h3 id="qText">It’s a sunny day. How will you get to the park?</h3>
+              <div class="choices" id="choices"></div>
+              <p class="feedback" id="feedback" aria-live="polite"></p>
+            </div>
+
+            <div id="meltResult" hidden>
+              <h3 id="resultTitle"></h3>
+              <p id="resultText" class="result-text"></p>
+              <p class="score-line">Ice health: <strong id="resultScore"></strong></p>
+              <button class="primary-btn" id="meltAgain" type="button">Play again</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <noscript><p style="padding:24px;font-family:sans-serif">Glacial Explorer needs JavaScript turned on to play.</p></noscript>
+  <script src="app.js"></script>
+</body>
+</html>
